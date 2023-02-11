@@ -1,0 +1,65 @@
+.toggle-theme-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  height: 2rem;
+}
+
+.toggle-theme-wrapper span {
+  font-size: 2rem;
+}
+
+.toggle-theme {
+  position: relative;
+  display: inline-block;
+  height: 2rem;
+  width: 60px;
+}
+
+.toggle-theme input {
+  display: none;
+}
+
+.toggler {
+  background-color: #121912;
+  position: absolute;
+  cursor: pointer;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: 0.2s;
+  height: 2rem;
+}
+
+.toggler:before {
+  background-color: #9cc11c;
+  bottom: 0.2rem;
+  content: "";
+  height: 1.6rem;
+  left: 0.2rem;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .toggler:before {
+  transform: translateX(26px);
+}
+
+input:checked + .toggler {
+  background-color: #9cc11c;
+}
+
+input:checked + .toggler:before {
+  background-color: #121912;
+}
+
+.toggler.round {
+  border-radius: 34px;
+}
+
+.toggler.round:before {
+  border-radius: 50%;
+}

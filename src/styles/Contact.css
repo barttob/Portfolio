@@ -1,25 +1,25 @@
 .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 60vh;
-    margin: 12rem 0 14rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 60vh;
+  margin: 12rem 0 14rem 0;
 }
 
-.contact--email { 
-    font-family: 'Jura';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 120px;
-    line-height: 118.5%;
-    letter-spacing: 0.05em;
+.contact--email {
+  font-family: "Jura";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 120px;
+  line-height: 118.5%;
+  letter-spacing: 0.05em;
 }
 
-.contact--barttob { 
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 120px;
-    line-height: 90%;
+.contact--barttob {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 90%;
 }

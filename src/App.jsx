@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 import { useEffect, useState } from "react";
 
-import './App.css'
+import "./App.css";
 
-import Menu from './components/Menu'
-import Home from './components/Home'
-import About from './components/About'
-import Work from './components/Work'
-import Contact from './components/Contact'
+import Menu from "./components/Menu";
+import Home from "./components/Home";
+import About from "./components/About";
+import Work from "./components/Work";
+import Contact from "./components/Contact";
 
-function App() {  
 
+function App() {
   const [scrollTop, setScrollTop] = useState(0);
 
   const onScroll = () => {
@@ -30,14 +30,14 @@ function App() {
   }, []);
 
   return (
-    <div className='app__container'>
-      <Menu scrollPosition={scrollTop}/>
+    <div className="app__container">
+      <Menu scrollPosition={scrollTop} />
       <Home />
       <About />
       <Work />
       <Contact />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

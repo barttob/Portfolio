@@ -3,9 +3,9 @@
   height: 100vh;
   width: 100vw;
   text-align: center;
-  color: var(--color-light);
+  color: var(--font-color-main);
 }
 
-.app__container { 
-  padding: 2rem
+.app__container {
+  padding: 2rem;
 }
