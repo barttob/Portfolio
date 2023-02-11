@@ -12,3 +12,18 @@ export const MusicData = [
         link:"https://youtu.be/cfOrEk8SOs8"
     },
 ]
+
+export const WorkData = [
+    {
+        id:1,
+        title:"Fizjorolka",
+        imgSrc:"/fizjorolka.jpg",
+        link:""
+    },
+    {
+        id:2,
+        name:"SnakeJS",
+        imgSrc:"/snake.jpg",
+        link:"https://github.com/barttob/SnakeJS"
+    },
+]
