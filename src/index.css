@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+@font-face {
+  font-family: 'quantumregular';
+  src: url('font/quantum-webfont.woff2') format('woff2'),
+       url('font/quantum-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+:root {
+  --bg-light: linear-gradient(232.31deg, #9CC11C -2.84%, #ECE705 56.41%);
+  --color-light: #121912;
+
+  font-family: 'Jura', sans-serif;
+  /* font-family: 'quantumregular'; */
+  background: var(--bg-light);
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
