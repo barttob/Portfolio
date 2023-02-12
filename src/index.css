@@ -14,6 +14,7 @@
   --font-color-main: #121912;
 
   font-family: "Jura", sans-serif;
+  font-size: 16px;
   /* font-family: 'quantumregular'; */
   background: var(--bg-gradient);
   height: 100%;
@@ -24,8 +25,8 @@
 }
 
 [data-theme="dark"] {
-  --font-color-main: #F9EF00;
-  --bg-gradient: linear-gradient(232.31deg, #182E11 -2.84%, #121912 56.41%);
+  --font-color-main: #f9ef00;
+  --bg-gradient: linear-gradient(232.31deg, #182e11 -2.84%, #121912 56.41%);
 }
 
 body {
@@ -33,4 +34,28 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+
+@media (max-width: 1919px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1439px) {
+  :root {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1023px) {
+  :root {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    font-size: 6px;
+  }
 }

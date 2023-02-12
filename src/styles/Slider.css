@@ -1,5 +1,6 @@
 .slider {
-  height: 60vh;
+  /* height: 60vh; */
+  padding-bottom: 8rem;
   margin: 2rem 0 0 0;
 }
 
@@ -40,4 +41,20 @@
   margin: 0 3px;
   cursor: pointer;
   font-size: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about__text {
+    width: 100%;
+    transform: translateY(0);
+    text-align: justify;
+  }
+  .slider__container img {
+    width: 100%;
+  }
 }

@@ -8,4 +8,6 @@
 
 .app__container {
   padding: 2rem;
+  max-width: 1920px;
+  margin: auto;
 }

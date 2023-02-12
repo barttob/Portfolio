@@ -37,9 +37,27 @@
 
 .home__img {
   width: 50%;
-  height: 80vh;
+  /* height: 80vh; */
 }
 
 .home__img img {
-  height: 80vh;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .home {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16rem 8rem 0 8rem;
+  }
+  .home__text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .home__img {
+    width: 80%;
+  }
 }

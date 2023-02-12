@@ -9,17 +9,19 @@
 }
 
 .about__img {
-  width: 50%;
-  height: 80vh;
+  width: 40%;
+  /* height: 80vh; */
   padding: 0 2rem 0 0;
 }
 
 .about__img img {
-  height: 60vh;
+  /* height: 60vh; */
+  width: 100%;
   transform: scaleX(-1);
 }
 
 .about__text {
+  width: 60%;
   font-family: "Jura";
   font-style: normal;
   font-weight: 500;
@@ -29,4 +31,20 @@
   text-align: left;
   transform: translateY(-6rem);
   padding: 0 0 0 2rem;
+}
+
+@media (max-width: 767px) {
+  .about {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .about__text {
+    width: 100%;
+    transform: translateY(0);
+    text-align: justify;
+  }
+  .abbout__img {
+    width: 80%;
+  }
 }
