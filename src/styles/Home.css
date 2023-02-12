@@ -5,7 +5,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 12rem 8rem 0 8rem;
+  padding: 10rem 8rem 0 8rem;
 }
 
 .home__text {
@@ -49,13 +49,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 16rem 8rem 0 8rem;
+    padding: 16rem 6rem 0 6rem;
   }
   .home__text {
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-bottom: 2rem;
+  }
+  .home__text--title {
+    font-size: 15vw;
+  }
+  .home__text--subtitle {
+    font-size: 6vw;
   }
   .home__img {
     width: 80%;

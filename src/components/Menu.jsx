@@ -1,4 +1,7 @@
 import React from "react";
+import { useState } from "react";
+import { MdClose } from "react-icons/md";
+import { FiMenu } from "react-icons/fi";
 
 import Scroll from "../subComponents/Scroll";
 
@@ -38,12 +41,17 @@ const toggleTheme = (e) => {
 };
 
 const Menu = ({ scrollPosition }) => {
+  const [navbarOpen, setNavbarOpen] = useState(false);
+
+  const handleToggle = () => {
+    setNavbarOpen(!navbarOpen);
+  };
+
   return (
-    <div className="menu">
+    <div className={`menu ${navbarOpen ? "menu--height" : ""}`}>
       <a href="#">
         {/* <img src="HEXLogoLight.svg" alt="logo" className="menu__logo"/> */}
         <svg
-
           viewBox="0 0 83 64"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -57,6 +65,38 @@ const Menu = ({ scrollPosition }) => {
           </g>
         </svg>
       </a>
+      <div className="menu__toggler">
+        <button onClick={handleToggle}>
+          {navbarOpen ? (
+            <MdClose className="menu__icon" />
+          ) : (
+            <FiMenu className="menu__icon" />
+          )}
+          {/* {navbarOpen ? "Close" : "Open"} */}
+        </button>
+      </div>
+
+      <div className={`menu__toggle ${navbarOpen ? "showMenu" : ""}`}>
+        <div className="menu__list">
+          <a className="menu__list--item" href="#" onClick={handleToggle}>
+            home
+          </a>
+          <a className="menu__list--item" href="#about" onClick={handleToggle}>
+            about me
+          </a>
+          <a className="menu__list--item" href="#work" onClick={handleToggle}>
+            work
+          </a>
+          <a
+            className="menu__list--item"
+            href="#contact"
+            onClick={handleToggle}
+          >
+            contact
+          </a>
+        </div>
+      </div>
+
       <div className="menu__list--under">
         <div className="menu__list">
           <a
@@ -65,8 +105,8 @@ const Menu = ({ scrollPosition }) => {
             style={
               scrollPosition < 26
                 ? { fontWeight: "bold" }
-                // ? { fontWeight: "bold", textDecoration: "underline" }
-                : { fontWeight: "normal" }
+                : //? { fontWeight: "bold", textDecoration: "underline" }
+                  { fontWeight: "normal" }
             }
           >
             home

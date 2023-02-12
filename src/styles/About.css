@@ -38,11 +38,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 12rem 6rem 0 6rem;
   }
   .about__text {
     width: 100%;
     transform: translateY(0);
     text-align: justify;
+    padding: 0;
   }
   .abbout__img {
     width: 80%;

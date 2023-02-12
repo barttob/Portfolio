@@ -11,3 +11,9 @@
   max-width: 1920px;
   margin: auto;
 }
+
+@media (max-width: 767px) {
+  .app__container {
+    padding: 0;
+  }
+}
