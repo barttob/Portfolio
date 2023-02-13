@@ -100,47 +100,38 @@ const Menu = ({ scrollPosition }) => {
       <div className="menu__list--under">
         <div className="menu__list">
           <a
-            className="menu__list--item"
+            className={`menu__list--item ${
+              scrollPosition < 26 ? "menu__list--item--active" : ""
+            }`}
             href="#"
-            style={
-              scrollPosition < 26
-                ? { fontWeight: "bold" }
-                : //? { fontWeight: "bold", textDecoration: "underline" }
-                  { fontWeight: "normal" }
-            }
           >
             home
           </a>
           <a
-            className="menu__list--item"
-            href="#about"
-            style={
+            className={`menu__list--item ${
               scrollPosition >= 26 && scrollPosition < 58
-                ? { fontWeight: "bold" }
-                : { fontWeight: "normal" }
-            }
+                ? "menu__list--item--active"
+                : ""
+            }`}
+            href="#about"
           >
             about me
           </a>
           <a
-            className="menu__list--item"
-            href="#work"
-            style={
+            className={`menu__list--item ${
               scrollPosition >= 58 && scrollPosition < 82
-                ? { fontWeight: "bold" }
-                : { fontWeight: "normal" }
-            }
+                ? "menu__list--item--active"
+                : ""
+            }`}
+            href="#work"
           >
             work
           </a>
           <a
-            className="menu__list--item"
+            className={`menu__list--item ${
+              scrollPosition >= 82 ? "menu__list--item--active" : ""
+            }`}
             href="#contact"
-            style={
-              scrollPosition >= 82
-                ? { fontWeight: "bold" }
-                : { fontWeight: "normal" }
-            }
           >
             contact
           </a>

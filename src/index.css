@@ -12,6 +12,7 @@
 :root {
   --bg-gradient: linear-gradient(232.31deg, #9cc11c -2.84%, #ece705 56.41%);
   --font-color-main: #121912;
+  --font-color-second: #182E12;
 
   font-family: "Jura", sans-serif;
   font-size: 16px;
@@ -26,6 +27,7 @@
 
 [data-theme="dark"] {
   --font-color-main: #f9ef00;
+  --font-color-second: #C1D243;
   --bg-gradient: linear-gradient(232.31deg, #182e11 -2.84%, #121912 56.41%);
 }
 

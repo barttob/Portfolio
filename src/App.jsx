@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 import "./App.css";
 
@@ -8,7 +9,6 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Work from "./components/Work";
 import Contact from "./components/Contact";
-
 
 function App() {
   const [scrollTop, setScrollTop] = useState(0);
@@ -31,11 +31,13 @@ function App() {
 
   return (
     <div className="app__container">
-      <Menu scrollPosition={scrollTop} />
-      <Home />
-      <About />
-      <Work />
-      <Contact />
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}>
+        <Menu scrollPosition={scrollTop} />
+        <Home />
+        <About />
+        <Work />
+        <Contact />
+      </motion.div>
     </div>
   );
 }
