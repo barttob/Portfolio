@@ -69,7 +69,12 @@
   z-index: 5;
   position: fixed;
   left: 8rem;
+  top: 10px;
   /* transform: translateX(-50%);; */
+}
+
+.menu__toggler svg{
+  stroke: var(--font-color-main);
 }
 
 .menu__toggle {
@@ -79,9 +84,9 @@
   left: 0;
   height: calc(100vh - 10rem);
   width: 100%;
-  /* background: var(--bg-gradient); */
-  backdrop-filter: blur(10px) contrast(90%) brightness(50%);
-  -webkit-backdrop-filter: blur(10px) contrast(90%) brightness(50%);
+  /* background: #fff; */
+  backdrop-filter: blur(10px) contrast(140%) brightness(60%);
+  -webkit-backdrop-filter: blur(10px) contrast(140%) brightness(60%);
 }
 
 .showMenu {

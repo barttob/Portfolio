@@ -29,6 +29,7 @@
 @media (max-width: 767px) {
   .contact {
     margin: 6rem 0 10rem 0;
+    padding-bottom: 4rem;
   }
   .contact--email, .contact--barttob {
     font-size: 8vw;

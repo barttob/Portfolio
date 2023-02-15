@@ -1,9 +1,11 @@
 import React from "react";
 import { useState } from "react";
+import { motion, useCycle } from "framer-motion";
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 
 import Scroll from "../subComponents/Scroll";
+import { MenuToggle } from "../subComponents/MenuToggle";
 
 import "../styles/Menu.css";
 
@@ -41,14 +43,10 @@ const toggleTheme = (e) => {
 };
 
 const Menu = ({ scrollPosition }) => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
-
-  const handleToggle = () => {
-    setNavbarOpen(!navbarOpen);
-  };
+  const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
-    <div className={`menu ${navbarOpen ? "menu--height" : ""}`}>
+    <div className={`menu ${isOpen ? "menu--height" : ""}`}>
       <a href="#">
         {/* <img src="HEXLogoLight.svg" alt="logo" className="menu__logo"/> */}
         <svg
@@ -65,33 +63,36 @@ const Menu = ({ scrollPosition }) => {
           </g>
         </svg>
       </a>
-      <div className="menu__toggler">
-        <button onClick={handleToggle}>
-          {navbarOpen ? (
-            <MdClose className="menu__icon" />
-          ) : (
-            <FiMenu className="menu__icon" />
-          )}
-          {/* {navbarOpen ? "Close" : "Open"} */}
-        </button>
-      </div>
 
-      <div className={`menu__toggle ${navbarOpen ? "showMenu" : ""}`}>
+      <motion.div
+        
+        initial={false}
+        animate={isOpen ? "open" : "closed"}
+      >
+        <MenuToggle toggle={() => toggleOpen()} className="menu__toggler"/>
+
+        {/* <button onClick={handleToggle}> */}
+        {/* {navbarOpen ? ( */}
+        {/* <MdClose className="menu__icon" /> */}
+        {/* ) : ( */}
+        {/* <FiMenu className="menu__icon" /> */}
+        {/* )} */}
+        {/* {navbarOpen ? "Close" : "Open"} */}
+        {/* </button> */}
+      </motion.div>
+
+      <div className={`menu__toggle ${isOpen ? "showMenu" : ""}`}>
         <div className="menu__list">
-          <a className="menu__list--item" href="#" onClick={handleToggle}>
+          <a className="menu__list--item" href="#" onClick={toggleOpen}>
             home
           </a>
-          <a className="menu__list--item" href="#about" onClick={handleToggle}>
+          <a className="menu__list--item" href="#about" onClick={toggleOpen}>
             about me
           </a>
-          <a className="menu__list--item" href="#work" onClick={handleToggle}>
+          <a className="menu__list--item" href="#work" onClick={toggleOpen}>
             work
           </a>
-          <a
-            className="menu__list--item"
-            href="#contact"
-            onClick={handleToggle}
-          >
+          <a className="menu__list--item" href="#contact" onClick={toggleOpen}>
             contact
           </a>
         </div>
